@@ -1,7 +1,7 @@
 {
-  "ota_url": "https://commadist.azureedge.net/neosupdate-staging/ota-signed-2d11748b213417232afc4af7e66f8254a0557a5f3325cf18cb9fd8d9218b3818.zip",
-  "ota_hash": "2d11748b213417232afc4af7e66f8254a0557a5f3325cf18cb9fd8d9218b3818",
-  "recovery_url": "https://commadist.azureedge.net/neosupdate-staging/recovery-4ec449501e96d4ea075e90a97ca3e07f1d3170d6da7966157c34124f329af926.img",
-  "recovery_len": 15988012,
-  "recovery_hash": "4ec449501e96d4ea075e90a97ca3e07f1d3170d6da7966157c34124f329af926"
+  "ota_url": "https://commadist.azureedge.net/neosupdate-staging/ota-signed-7b02e8a42af99413777afec669a3937c367dad2044f6e9849cd780fbe8b3ffea.zip",
+  "ota_hash": "7b02e8a42af99413777afec669a3937c367dad2044f6e9849cd780fbe8b3ffea",
+  "recovery_url": "https://commadist.azureedge.net/neosupdate-staging/recovery-9874a53d247d5904edf0daf89764f4f02e033ef1cc9c7384490780b109e42c77.img",
+  "recovery_len": 16020780,
+  "recovery_hash": "9874a53d247d5904edf0daf89764f4f02e033ef1cc9c7384490780b109e42c77"
 }
