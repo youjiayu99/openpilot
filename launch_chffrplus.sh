@@ -63,6 +63,12 @@ function launch {
   echo 0-2 > /dev/cpuset/android/cpus
   echo 0-3 > /dev/cpuset/app/cpus
 
+  # TODO: this should be in comma.sh
+  # setup a realtime cpuset to shield CPU 3 from non-openpilot processes
+  mkdir /dev/cpuset/app/rt
+  echo 3 > /dev/cpuset/app/rt/cpus
+  echo 1 > /dev/cpuset/app/rt/cpu_exclusive
+
   # Collect RIL and other possibly long-running I/O interrupts onto CPU 1
   echo 1 > /proc/irq/78/smp_affinity_list # qcom,smd-modem (LTE radio)
   echo 1 > /proc/irq/33/smp_affinity_list # ufshcd (flash storage)
