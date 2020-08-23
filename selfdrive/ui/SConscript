@@ -22,5 +22,5 @@ else:
   else:
     qt_libs += ["Qt5Widgets", "Qt5Gui", "Qt5Core", "Qt5DBus"]
 
-  qt_src = ["qt/ui.cc", "qt/window.cc", "qt/settings.cc"] + src
+  qt_src = ["qt/ui.cc", "qt/window.cc", "qt/settings.cc", "qt/wifi.cc"] + src
   qt_env.Program("_ui", qt_src, LIBS=qt_libs + libs)
