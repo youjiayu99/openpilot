@@ -211,7 +211,7 @@ int main(int argc, char* argv[]) {
 
   const int MIN_VOLUME = LEON ? 12 : 9;
   const int MAX_VOLUME = LEON ? 15 : 12;
-  assert(s->sound.init(MIN_VOLUME));
+  s->sound.setVolume(MIN_VOLUME);
 
   int draws = 0;
 
