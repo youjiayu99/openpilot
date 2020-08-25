@@ -181,21 +181,14 @@ qt_env = None
 if arch in ["x86_64", "Darwin", "larch64"]:
   qt_env = env.Clone()
 
-  if arch == "larch64":
-    qt_env['QTDIR'] = "/usr/local/Qt-5.15.0"
-    QT_BASE = "/usr/local/Qt-5.15.0/"
-    qt_dirs = [
-      QT_BASE + "include/",
-      QT_BASE + "include/QtWidgets",
-      QT_BASE + "include/QtGui",
-      QT_BASE + "include/QtCore",
-      QT_BASE + "include/QtDBus",
-      QT_BASE + "include/QtMultimedia",
-    ]
-    qt_env["RPATH"] += [QT_BASE + "lib"]
-  elif arch == "Darwin":
-    qt_env['QTDIR'] = "/usr/local/opt/qt"
-    QT_BASE = "/usr/local/opt/qt/"
+  if arch in ["larch64", "Darwin"]:
+    if arch == "Darwin":
+      qt_env['QTDIR'] = "/usr/local/opt/qt" if arch == "Darwin" else ""
+      QT_BASE = "/usr/local/opt/qt/"
+    else:
+      qt_env['QTDIR'] = "/usr/local/Qt-5.15.0"
+      QT_BASE = "/usr/local/Qt-5.15.0/"
+
     qt_dirs = [
       QT_BASE + "include/",
       QT_BASE + "include/QtWidgets",
@@ -212,6 +205,7 @@ if arch in ["x86_64", "Darwin", "larch64"]:
       f"/usr/include/{arch}-linux-gnu/qt5/QtGui",
       f"/usr/include/{arch}-linux-gnu/qt5/QtCore",
       f"/usr/include/{arch}-linux-gnu/qt5/QtDBus",
+      f"/usr/include/{arch}-linux-gnu/qt5/QtMultiMedia",
     ]
 
   qt_env.Tool('qt')
